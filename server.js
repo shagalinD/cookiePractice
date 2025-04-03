@@ -170,7 +170,7 @@ app.get('/data', (req, res) => {
 
     const now = new Date()
     const newData = {
-      data: `Случайные данные: ${Math.random().toString(36).substring(2, 15)}`,
+      data: `Ваши данные: ${Math.random().toString(36).substring(2, 15)}`,
       timestamp: now.toLocaleString(),
       createdAt: now.getTime(),
     }
