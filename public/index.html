@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Кнопка темы в правом верхнем углу -->
+      <button id="theme-toggle" class="theme-btn">
+        <span class="light-icon">☀️</span>
+        <span class="dark-icon hidden">🌙</span>
+      </button>
+
+      <!-- Секция авторизации -->
+      <div id="auth-section">
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="login">Вход</button>
+          <button class="tab-btn" data-tab="register">Регистрация</button>
+        </div>
+
+        <div id="login-tab" class="tab-content active">
+          <h2>Вход в систему</h2>
+          <div class="form-group">
+            <input type="text" id="login-username" placeholder="Логин" />
+          </div>
+          <div class="form-group">
+            <input type="password" id="login-password" placeholder="Пароль" />
+          </div>
+          <button id="login-btn">Войти</button>
+        </div>
+
+        <div id="register-tab" class="tab-content">
+          <h2>Регистрация</h2>
+          <div class="form-group">
+            <input type="text" id="register-username" placeholder="Логин" />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              id="register-password"
+              placeholder="Пароль"
+            />
+          </div>
+          <button id="register-btn">Зарегистрироваться</button>
+        </div>
+
+        <p id="error-message" class="error hidden"></p>
+      </div>
+
+      <!-- Секция профиля -->
+      <div id="profile-section" class="hidden">
+        <h2>Профиль</h2>
+        <p>Добро пожаловать, <span id="username-display"></span>!</p>
+
+        <div class="card">
+          <h3>Данные с кэшированием</h3>
+          <div class="data-container">
+            <div id="data-content">Загрузка данных...</div>
+            <div class="data-info">
+              <small id="data-timestamp"></small>
+              <button id="refresh-data-btn">Обновить</button>
+            </div>
+          </div>
+        </div>
+
+        <button id="logout-btn" class="logout-btn">Выйти</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
